@@ -14,7 +14,7 @@ steps:
     - 'create-with-container'
     - 'calculator'
     - '--boot-disk-size=20GB'
-    - '--zone=asia-south1-c'
+    - '--zone=asia-south1-b'
     - '--tags=allow-hc-and-proxy,allow-ssh,http-server'
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
