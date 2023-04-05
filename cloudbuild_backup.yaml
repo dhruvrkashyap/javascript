@@ -10,11 +10,11 @@ steps:
   #id: create-instance-template
   args:
     - 'compute'
-    - 'ssh'
-    - 'calculator-ssh'
+    - 'instances'
+    - 'update-container'
+    - 'calculator'
     - '--zone=asia-south1-c'
-#inside ssh
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['run', '-p', '80:80', '--name', 'calculator', '-d', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA', ]
+    - '--container-image'
+    - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
 images:
 - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
