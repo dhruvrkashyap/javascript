@@ -10,8 +10,9 @@ steps:
   #id: create-instance-template
   args:
     - 'compute'
+    - 'instance'
     - 'create-with-container'
-    #- 'cloud-build-instance-template-$_ENV-$SHORT_SHA'
+    - 'calculator'
     - '--custom-cpu=1'
     - '--custom-memory=2GB'
     - '--boot-disk-size=20GB'
