@@ -7,12 +7,11 @@ steps:
   args: ['push', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA']
 # Create the new instance template
 - name: 'gcr.io/cloud-builders/gcloud'
-  id: create-instance-template
+  #id: create-instance-template
   args:
     - 'compute'
-    - 'instance-templates'
     - 'create-with-container'
-    - 'cloud-build-instance-template-$_ENV-$SHORT_SHA'
+    #- 'cloud-build-instance-template-$_ENV-$SHORT_SHA'
     - '--custom-cpu=1'
     - '--custom-memory=2GB'
     - '--boot-disk-size=20GB'
