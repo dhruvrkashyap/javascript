@@ -11,10 +11,9 @@ steps:
   args:
     - 'compute'
     - 'instances'
-    - 'create-with-container'
+    - 'update-container'
     - 'calculator'
     - '--zone=asia-south1-b'
-    - '--tags=allow-hc-and-proxy,allow-ssh,http-server'
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
 images:
