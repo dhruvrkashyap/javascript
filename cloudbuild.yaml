@@ -10,16 +10,16 @@ images:
 - name: 'gcr.io/cloud-builders/gcloud'
   id: create-instance-template
   args:
-    - compute
-    - instance-templates
-    - create-with-container
-    - cloud-build-instance-template-$_ENV-$SHORT_SHA
-    - --custom-cpu=1
-    - --custom-memory=2GB
-    - --boot-disk-size=20GB
-    - --region=us-central1
-    - --subnet=mig-subnet
-    - --tags=allow-hc-and-proxy,allow-ssh
-    - --container-image
-    - asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA
-    - --tags http-server
+    - 'compute'
+    - 'instance-templates'
+    - 'create-with-container'
+    - 'cloud-build-instance-template-$_ENV-$SHORT_SHA'
+    - '--custom-cpu=1'
+    - '--custom-memory=2GB'
+    - '--boot-disk-size=20GB'
+    - '--region=asia-south1'
+    - '--subnet=mig-subnet'
+    - '--tags=allow-hc-and-proxy,allow-ssh'
+    - '--container-image'
+    - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
+    - '--tags http-server'
