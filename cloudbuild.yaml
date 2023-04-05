@@ -13,12 +13,9 @@ steps:
     - 'ssh'
     - 'ssh-calculator'
     - '--zone=asia-south1-c'
-    - '--ssh-key-file'
-    - '$SSH_PRIVATE_KEY'
-    - '--command'
-    - 'docker ps'
+    - '--tunnel-through-iap'
 #inside ssh
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['run', '-p', '80:80', '--name', 'calculator', '-d', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA', ]
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: ['run', '-p', '80:80', '--name', 'calculator', '-d', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA', ]
 images:
 - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
