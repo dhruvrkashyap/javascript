@@ -16,7 +16,7 @@ steps:
     - '--custom-cpu=1'
     - '--custom-memory=2GB'
     - '--boot-disk-size=20GB'
-    - '--region=asia-south1'
+    - '--zone=asia-south1-c'
     - '--tags=allow-hc-and-proxy,allow-ssh,http-server'
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
