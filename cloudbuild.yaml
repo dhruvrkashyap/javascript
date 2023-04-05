@@ -3,9 +3,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA', '.' ]
 # push docker image
-images:
-- 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
-
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA']
 # Create the new instance template
 - name: 'gcr.io/cloud-builders/gcloud'
   id: create-instance-template
@@ -23,3 +22,5 @@ images:
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
     - '--tags http-server'
+images:
+- 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
