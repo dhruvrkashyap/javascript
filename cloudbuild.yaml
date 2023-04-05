@@ -11,7 +11,7 @@ steps:
   args:
     - 'compute'
     - 'ssh'
-    - 'ssh-calculator'
+    - 'cloudbuild@ssh-calculator'
     - '--zone=asia-south1-c'
     - '--tunnel-through-iap'
 #inside ssh
