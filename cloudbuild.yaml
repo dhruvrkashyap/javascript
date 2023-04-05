@@ -13,7 +13,7 @@ steps:
     - 'instances'
     - 'update-container'
     - 'calculator'
-    - '--zone=asia-south1-b'
+    - '--zone=asia-south1-c'
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
 images:
