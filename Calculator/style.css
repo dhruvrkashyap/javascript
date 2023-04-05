@@ -1,0 +1,50 @@
+.base{
+    display: flex;
+    border-style: solid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Calibri;
+    background-color: aquamarine;
+    height: 60vh;
+    width: 40vw;
+}
+.name{
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+}
+.top{
+    border: 2px solid black;
+    height: 10vh;
+    width: 80%;
+    background-color: bisque;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.calc{
+    height: 60%;
+    width: 83%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: -6%;
+}
+#text{
+    margin-top: 4%;
+    margin-right: 2%;
+}
+
+button{
+    border-style: outset;
+    background-color: bisque;
+    height: 20%;
+    width: 22%;
+}
+#plus, #minus, #multi, #div {
+    background-color: yellow;
+}
+#C{
+    background-color: tomato;
+}
