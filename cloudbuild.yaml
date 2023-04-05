@@ -13,7 +13,6 @@ steps:
     - 'instances'
     - 'create-with-container'
     - 'calculator'
-    - '--boot-disk-size=20GB'
     - '--zone=asia-south1-b'
     - '--tags=allow-hc-and-proxy,allow-ssh,http-server'
     - '--container-image'
