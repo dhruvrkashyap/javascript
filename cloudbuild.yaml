@@ -18,9 +18,8 @@ steps:
     - '--boot-disk-size=20GB'
     - '--region=asia-south1'
     - '--subnet=mig-subnet'
-    - '--tags=allow-hc-and-proxy,allow-ssh'
+    - '--tags=allow-hc-and-proxy,allow-ssh,http-server'
     - '--container-image'
     - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
-    - '--tags http-server'
 images:
 - 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA'
