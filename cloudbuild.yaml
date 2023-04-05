@@ -10,7 +10,7 @@ steps:
   #id: create-instance-template
   args:
     - 'compute'
-    - 'instance'
+    - 'instances'
     - 'create-with-container'
     - 'calculator'
     - '--custom-cpu=1'
