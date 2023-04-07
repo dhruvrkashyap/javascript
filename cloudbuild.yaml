@@ -14,7 +14,7 @@ steps:
     - 'dhruvrkashyap@ssh-calculator'
     - '--zone=asia-south1-c'
     - '--tunnel-through-iap'
-    - '--command="sudo docekr ps"'
+    - '--command="sudo docker ps"'
 #inside ssh
 #- name: 'gcr.io/cloud-builders/docker'
 #  args: ['run', '-p', '80:80', '--name', 'calculator', '-d', 'asia-south1-docker.pkg.dev/$PROJECT_ID/docker/github.com/dhruvrkashyap/javascript:$COMMIT_SHA', ]
